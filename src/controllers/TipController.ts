@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 
-import Tip from '@src/schemas/Tip'
+import Tip from '../schemas/Tip'
 
 class TipController {
   public async index (request: Request, response: Response): Promise<Response> {    

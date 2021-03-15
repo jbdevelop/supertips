@@ -2,6 +2,8 @@ import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
 
+import routes from './routes'
+
 class App {
   public express: express.Application
 
@@ -19,14 +21,12 @@ class App {
   }
 
   private database () {  
-    const uri = 'mongodb+srv://admin:rRimjy6F8c1EYYl4@cluster0.kwono.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'  
+    const uri = 'mongodb+srv://admin:rRimjy6F8c1EYYl4@cluster0.kwono.mongodb.net/supertips?retryWrites=true&w=majority'  
     mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   }
 
   private routes () {
-    this.express.get('/', (request, response) => {
-      return response.send('First Route')
-    })
+    this.express.use(routes)
   } 
 }
 
