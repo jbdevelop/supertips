@@ -2,11 +2,11 @@
   "name": "supertips",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev src/index.ts",
-    "start": "yarn build && node dist/src/index.js",
+    "dev": "ts-node-dev src/server.ts",
+    "start": "yarn build && node dist/src/server.js",
     "lint": "eslint ./src --ext .ts --fix",
     "lint:fix": "eslint ./src --ext .ts"
   },
@@ -14,7 +14,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
     "@types/module-alias": "^2.0.0",
+    "@types/mongoose": "^5.10.3",
     "@types/node": "^14.14.34",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
@@ -23,9 +26,10 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@types/express": "^4.17.11",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "module-alias": "^2.2.2",
-    "mongodb": "^3.6.4"
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.12.0"
   }
 }
