@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose'
+import TipInterface from '../interfaces/Tip'
 
 const tipSchema = new Schema({
   url: String,
@@ -7,4 +8,4 @@ const tipSchema = new Schema({
   timestamps: true
 })
 
-export default model('Tip', tipSchema)
+export default model<TipInterface>('Tip', tipSchema)
