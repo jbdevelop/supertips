@@ -1,9 +1,10 @@
 import { Request } from 'express'
-import TipRepository from '../repositories/TipRepository'
-import TipInterface from '../interfaces/Tip'
+import TipRepository from '../repositories/tip'
+import { TipInterface } from '../interfaces/tip'
+
 class TipService {
   public async index (): Promise<TipInterface[]> {    
-    const tips = await TipRepository.index()    
+    const tips = await TipRepository.index()
     
     return tips
   }  

@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import TipController from './controllers/TipController'
+import TipController from './controllers/tip'
 
 const routes = Router()
 

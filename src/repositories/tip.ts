@@ -1,6 +1,7 @@
-import TipSchema from '../schemas/Tip'
-import TipInterface from '../interfaces/Tip'
+import TipSchema from '../schemas/tip'
+import { TipInterface } from '../interfaces/tip'
 import { Request } from 'express'
+
 class TipRepository {
   public async index (): Promise<TipInterface[]> {    
     const tips = await TipSchema.find()
@@ -19,7 +20,6 @@ class TipRepository {
 
     return tips
   }
-
 }
 
 export default new TipRepository()
