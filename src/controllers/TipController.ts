@@ -1,8 +1,6 @@
 import { Request, Response } from 'express'
-
 import TipRepository from '../repositories/TipRepository'
 import TipService from '../services/TipService'
-
 class TipController {
   public async index (request: Request, response: Response): Promise<Response> {    
     const tips = await TipService.index()

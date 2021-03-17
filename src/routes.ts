@@ -8,5 +8,4 @@ routes.post('/tips', TipController.create)
 routes.get('/tips', TipController.index)
 routes.get('/tips/tags/:tags', TipController.show)
 
-
 export default routes

@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { Request } from 'express'
 import TipRepository from '../repositories/TipRepository'
 import TipInterface from '../interfaces/Tip'
-
-
 class TipService {
   public async index (): Promise<TipInterface[]> {    
     const tips = await TipRepository.index()    
